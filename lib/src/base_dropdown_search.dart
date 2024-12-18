@@ -754,19 +754,19 @@ class DropdownSearchState<T> extends State<BaseDropdownSearch<T>> {
             ? (widget.popupProps as CupertinoMultiSelectionPopupProps<T>)
                 .dialogProps
             : (widget.popupProps as CupertinoPopupProps<T>).dialogProps,
-        [
-          CupertinoDialogAction(
-            child: Text("Cancel"),
-            isDestructiveAction: true,
-            onPressed: () => closeDropDownSearch(),
-          ),
-          if (isMultiSelectionMode)
-            CupertinoDialogAction(
-              child: Text("OK"),
-              isDefaultAction: true,
-              onPressed: () => _popupStateKey.currentState?.onValidate(),
-            ),
-        ],
+        // [
+        //   CupertinoDialogAction(
+        //     child: Text("Cancel"),
+        //     isDestructiveAction: true,
+        //     onPressed: () => closeDropDownSearch(),
+        //   ),
+        //   if (isMultiSelectionMode)
+        //     CupertinoDialogAction(
+        //       child: Text("OK"),
+        //       isDefaultAction: true,
+        //       onPressed: () => _popupStateKey.currentState?.onValidate(),
+        //     ),
+        // ],
       );
     }
 
